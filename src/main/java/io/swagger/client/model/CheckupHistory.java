@@ -37,7 +37,7 @@ import java.util.List;
  * An asset named CheckupHistory
  */
 @ApiModel(description = "An asset named CheckupHistory")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-12-22T10:20:50.211+07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-16T15:01:59.451+07:00")
 public class CheckupHistory   {
   @SerializedName("$class")
   private String PropertyClass = "com.depa.blockchain.assets.CheckupHistory";
@@ -129,14 +129,14 @@ public class CheckupHistory   {
   @SerializedName("mono")
   private String mono = null;
 
+  @SerializedName("calcium_score_result")
+  private String calciumScoreResult = null;
+
+  @SerializedName("calcium_score_image")
+  private String calciumScoreImage = null;
+
   @SerializedName("dateTimeUpdate")
   private String dateTimeUpdate = null;
-
-  @SerializedName("visit")
-  private String visit = null;
-
-  @SerializedName("doctorId")
-  private String doctorId = null;
 
   @SerializedName("assetId")
   private String assetId = null;
@@ -213,7 +213,7 @@ public class CheckupHistory   {
    * Get pulse
    * @return pulse
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPulse() {
     return pulse;
   }
@@ -231,7 +231,7 @@ public class CheckupHistory   {
    * Get pressure
    * @return pressure
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPressure() {
     return pressure;
   }
@@ -249,7 +249,7 @@ public class CheckupHistory   {
    * Get cbcWbc
    * @return cbcWbc
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getCbcWbc() {
     return cbcWbc;
   }
@@ -267,7 +267,7 @@ public class CheckupHistory   {
    * Get hct
    * @return hct
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getHct() {
     return hct;
   }
@@ -285,7 +285,7 @@ public class CheckupHistory   {
    * Get hb
    * @return hb
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getHb() {
     return hb;
   }
@@ -303,7 +303,7 @@ public class CheckupHistory   {
    * Get ph
    * @return ph
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPh() {
     return ph;
   }
@@ -321,7 +321,7 @@ public class CheckupHistory   {
    * Get uaWbc
    * @return uaWbc
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getUaWbc() {
     return uaWbc;
   }
@@ -339,7 +339,7 @@ public class CheckupHistory   {
    * Get rbc
    * @return rbc
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getRbc() {
     return rbc;
   }
@@ -357,7 +357,7 @@ public class CheckupHistory   {
    * Get alm
    * @return alm
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getAlm() {
     return alm;
   }
@@ -375,7 +375,7 @@ public class CheckupHistory   {
    * Get sugar
    * @return sugar
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getSugar() {
     return sugar;
   }
@@ -393,7 +393,7 @@ public class CheckupHistory   {
    * Get spgr
    * @return spgr
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getSpgr() {
     return spgr;
   }
@@ -411,7 +411,7 @@ public class CheckupHistory   {
    * Get fbs
    * @return fbs
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getFbs() {
     return fbs;
   }
@@ -429,7 +429,7 @@ public class CheckupHistory   {
    * Get bun
    * @return bun
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getBun() {
     return bun;
   }
@@ -447,7 +447,7 @@ public class CheckupHistory   {
    * Get creatinine
    * @return creatinine
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getCreatinine() {
     return creatinine;
   }
@@ -465,7 +465,7 @@ public class CheckupHistory   {
    * Get uric
    * @return uric
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getUric() {
     return uric;
   }
@@ -483,7 +483,7 @@ public class CheckupHistory   {
    * Get chlt
    * @return chlt
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getChlt() {
     return chlt;
   }
@@ -501,7 +501,7 @@ public class CheckupHistory   {
    * Get trig
    * @return trig
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getTrig() {
     return trig;
   }
@@ -519,7 +519,7 @@ public class CheckupHistory   {
    * Get hdl
    * @return hdl
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getHdl() {
     return hdl;
   }
@@ -537,7 +537,7 @@ public class CheckupHistory   {
    * Get ldl
    * @return ldl
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getLdl() {
     return ldl;
   }
@@ -555,7 +555,7 @@ public class CheckupHistory   {
    * Get alk
    * @return alk
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getAlk() {
     return alk;
   }
@@ -573,7 +573,7 @@ public class CheckupHistory   {
    * Get sgot
    * @return sgot
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getSgot() {
     return sgot;
   }
@@ -591,7 +591,7 @@ public class CheckupHistory   {
    * Get sgpt
    * @return sgpt
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getSgpt() {
     return sgpt;
   }
@@ -609,7 +609,7 @@ public class CheckupHistory   {
    * Get hba1c
    * @return hba1c
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getHba1c() {
     return hba1c;
   }
@@ -627,7 +627,7 @@ public class CheckupHistory   {
    * Get eos
    * @return eos
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getEos() {
     return eos;
   }
@@ -645,7 +645,7 @@ public class CheckupHistory   {
    * Get pmn
    * @return pmn
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPmn() {
     return pmn;
   }
@@ -663,7 +663,7 @@ public class CheckupHistory   {
    * Get lym
    * @return lym
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getLym() {
     return lym;
   }
@@ -681,13 +681,49 @@ public class CheckupHistory   {
    * Get mono
    * @return mono
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getMono() {
     return mono;
   }
 
   public void setMono(String mono) {
     this.mono = mono;
+  }
+
+  public CheckupHistory calciumScoreResult(String calciumScoreResult) {
+    this.calciumScoreResult = calciumScoreResult;
+    return this;
+  }
+
+   /**
+   * Get calciumScoreResult
+   * @return calciumScoreResult
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCalciumScoreResult() {
+    return calciumScoreResult;
+  }
+
+  public void setCalciumScoreResult(String calciumScoreResult) {
+    this.calciumScoreResult = calciumScoreResult;
+  }
+
+  public CheckupHistory calciumScoreImage(String calciumScoreImage) {
+    this.calciumScoreImage = calciumScoreImage;
+    return this;
+  }
+
+   /**
+   * Get calciumScoreImage
+   * @return calciumScoreImage
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCalciumScoreImage() {
+    return calciumScoreImage;
+  }
+
+  public void setCalciumScoreImage(String calciumScoreImage) {
+    this.calciumScoreImage = calciumScoreImage;
   }
 
   public CheckupHistory dateTimeUpdate(String dateTimeUpdate) {
@@ -706,42 +742,6 @@ public class CheckupHistory   {
 
   public void setDateTimeUpdate(String dateTimeUpdate) {
     this.dateTimeUpdate = dateTimeUpdate;
-  }
-
-  public CheckupHistory visit(String visit) {
-    this.visit = visit;
-    return this;
-  }
-
-   /**
-   * The identifier of an instance of visit
-   * @return visit
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "The identifier of an instance of visit")
-  public String getVisit() {
-    return visit;
-  }
-
-  public void setVisit(String visit) {
-    this.visit = visit;
-  }
-
-  public CheckupHistory doctorId(String doctorId) {
-    this.doctorId = doctorId;
-    return this;
-  }
-
-   /**
-   * The identifier of an instance of doctorId
-   * @return doctorId
-  **/
-  @ApiModelProperty(example = "null", value = "The identifier of an instance of doctorId")
-  public String getDoctorId() {
-    return doctorId;
-  }
-
-  public void setDoctorId(String doctorId) {
-    this.doctorId = doctorId;
   }
 
   public CheckupHistory assetId(String assetId) {
@@ -861,9 +861,9 @@ public class CheckupHistory   {
         Objects.equals(this.pmn, checkupHistory.pmn) &&
         Objects.equals(this.lym, checkupHistory.lym) &&
         Objects.equals(this.mono, checkupHistory.mono) &&
+        Objects.equals(this.calciumScoreResult, checkupHistory.calciumScoreResult) &&
+        Objects.equals(this.calciumScoreImage, checkupHistory.calciumScoreImage) &&
         Objects.equals(this.dateTimeUpdate, checkupHistory.dateTimeUpdate) &&
-        Objects.equals(this.visit, checkupHistory.visit) &&
-        Objects.equals(this.doctorId, checkupHistory.doctorId) &&
         Objects.equals(this.assetId, checkupHistory.assetId) &&
         Objects.equals(this.authorized, checkupHistory.authorized) &&
         Objects.equals(this.patient, checkupHistory.patient) &&
@@ -872,7 +872,7 @@ public class CheckupHistory   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(PropertyClass, checkupHistoryId, dateTimeServe, pulse, pressure, cbcWbc, hct, hb, ph, uaWbc, rbc, alm, sugar, spgr, fbs, bun, creatinine, uric, chlt, trig, hdl, ldl, alk, sgot, sgpt, hba1c, eos, pmn, lym, mono, dateTimeUpdate, visit, doctorId, assetId, authorized, patient, healthCareProvider);
+    return Objects.hash(PropertyClass, checkupHistoryId, dateTimeServe, pulse, pressure, cbcWbc, hct, hb, ph, uaWbc, rbc, alm, sugar, spgr, fbs, bun, creatinine, uric, chlt, trig, hdl, ldl, alk, sgot, sgpt, hba1c, eos, pmn, lym, mono, calciumScoreResult, calciumScoreImage, dateTimeUpdate, assetId, authorized, patient, healthCareProvider);
   }
 
   @Override
@@ -910,9 +910,9 @@ public class CheckupHistory   {
     sb.append("    pmn: ").append(toIndentedString(pmn)).append("\n");
     sb.append("    lym: ").append(toIndentedString(lym)).append("\n");
     sb.append("    mono: ").append(toIndentedString(mono)).append("\n");
+    sb.append("    calciumScoreResult: ").append(toIndentedString(calciumScoreResult)).append("\n");
+    sb.append("    calciumScoreImage: ").append(toIndentedString(calciumScoreImage)).append("\n");
     sb.append("    dateTimeUpdate: ").append(toIndentedString(dateTimeUpdate)).append("\n");
-    sb.append("    visit: ").append(toIndentedString(visit)).append("\n");
-    sb.append("    doctorId: ").append(toIndentedString(doctorId)).append("\n");
     sb.append("    assetId: ").append(toIndentedString(assetId)).append("\n");
     sb.append("    authorized: ").append(toIndentedString(authorized)).append("\n");
     sb.append("    patient: ").append(toIndentedString(patient)).append("\n");
