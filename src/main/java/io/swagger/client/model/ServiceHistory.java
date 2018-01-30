@@ -58,9 +58,6 @@ public class ServiceHistory   {
   @SerializedName("assetId")
   private String assetId = null;
 
-  @SerializedName("authorized")
-  private List<String> authorized = new ArrayList<String>();
-
   @SerializedName("patient")
   private String patient = null;
 
@@ -175,29 +172,6 @@ public class ServiceHistory   {
     this.assetId = assetId;
   }
 
-  public ServiceHistory authorized(List<String> authorized) {
-    this.authorized = authorized;
-    return this;
-  }
-
-  public ServiceHistory addAuthorizedItem(String authorizedItem) {
-    this.authorized.add(authorizedItem);
-    return this;
-  }
-
-   /**
-   * Get authorized
-   * @return authorized
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<String> getAuthorized() {
-    return authorized;
-  }
-
-  public void setAuthorized(List<String> authorized) {
-    this.authorized = authorized;
-  }
-
   public ServiceHistory patient(String patient) {
     this.patient = patient;
     return this;
@@ -250,14 +224,13 @@ public class ServiceHistory   {
         Objects.equals(this.dateTimeUpdate, serviceHistory.dateTimeUpdate) &&
         Objects.equals(this.insuranceId, serviceHistory.insuranceId) &&
         Objects.equals(this.assetId, serviceHistory.assetId) &&
-        Objects.equals(this.authorized, serviceHistory.authorized) &&
         Objects.equals(this.patient, serviceHistory.patient) &&
         Objects.equals(this.healthCareProvider, serviceHistory.healthCareProvider);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(PropertyClass, serviceId, dateTimeService, dateTimeUpdate, insuranceId, assetId, authorized, patient, healthCareProvider);
+    return Objects.hash(PropertyClass, serviceId, dateTimeService, dateTimeUpdate, insuranceId, assetId, patient, healthCareProvider);
   }
 
   @Override
@@ -271,7 +244,6 @@ public class ServiceHistory   {
     sb.append("    dateTimeUpdate: ").append(toIndentedString(dateTimeUpdate)).append("\n");
     sb.append("    insuranceId: ").append(toIndentedString(insuranceId)).append("\n");
     sb.append("    assetId: ").append(toIndentedString(assetId)).append("\n");
-    sb.append("    authorized: ").append(toIndentedString(authorized)).append("\n");
     sb.append("    patient: ").append(toIndentedString(patient)).append("\n");
     sb.append("    healthCareProvider: ").append(toIndentedString(healthCareProvider)).append("\n");
     sb.append("}");

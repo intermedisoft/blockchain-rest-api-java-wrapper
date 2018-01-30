@@ -38,7 +38,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
-import io.swagger.client.model.Doctor;
+import io.swagger.client.model.Xray;
 import io.swagger.client.model.InlineResponse200;
 
 import java.lang.reflect.Type;
@@ -47,14 +47,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DoctorApi {
+public class XrayApi {
     private ApiClient apiClient;
 
-    public DoctorApi() {
+    public XrayApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public DoctorApi(ApiClient apiClient) {
+    public XrayApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 
@@ -66,13 +66,13 @@ public class DoctorApi {
         this.apiClient = apiClient;
     }
 
-    /* Build call for doctorCreate */
-    private com.squareup.okhttp.Call doctorCreateCall(Doctor data, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for xrayCreate */
+    private com.squareup.okhttp.Call xrayCreateCall(Xray data, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = data;
         
 
         // create path and map variables
-        String localVarPath = "/Doctor".replaceAll("\\{format\\}","json");
+        String localVarPath = "/Xray".replaceAll("\\{format\\}","json");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
 
@@ -95,7 +95,7 @@ public class DoctorApi {
         if(progressListener != null) {
             apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                public com.squareup.okhttp.Response intercept(Chain chain) throws IOException {
                     com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
@@ -112,11 +112,11 @@ public class DoctorApi {
      * Create a new instance of the model and persist it into the data source.
      * 
      * @param data Model instance data (optional)
-     * @return Doctor
+     * @return Xray
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Doctor doctorCreate(Doctor data) throws ApiException {
-        ApiResponse<Doctor> resp = doctorCreateWithHttpInfo(data);
+    public Xray xrayCreate(Xray data) throws ApiException {
+        ApiResponse<Xray> resp = xrayCreateWithHttpInfo(data);
         return resp.getData();
     }
 
@@ -124,12 +124,12 @@ public class DoctorApi {
      * Create a new instance of the model and persist it into the data source.
      * 
      * @param data Model instance data (optional)
-     * @return ApiResponse&lt;Doctor&gt;
+     * @return ApiResponse&lt;Xray&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Doctor> doctorCreateWithHttpInfo(Doctor data) throws ApiException {
-        com.squareup.okhttp.Call call = doctorCreateCall(data, null, null);
-        Type localVarReturnType = new TypeToken<Doctor>(){}.getType();
+    public ApiResponse<Xray> xrayCreateWithHttpInfo(Xray data) throws ApiException {
+        com.squareup.okhttp.Call call = xrayCreateCall(data, null, null);
+        Type localVarReturnType = new TypeToken<Xray>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -141,7 +141,7 @@ public class DoctorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call doctorCreateAsync(Doctor data, final ApiCallback<Doctor> callback) throws ApiException {
+    public com.squareup.okhttp.Call xrayCreateAsync(Xray data, final ApiCallback<Xray> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -162,23 +162,23 @@ public class DoctorApi {
             };
         }
 
-        com.squareup.okhttp.Call call = doctorCreateCall(data, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Doctor>(){}.getType();
+        com.squareup.okhttp.Call call = xrayCreateCall(data, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Xray>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for doctorDeleteById */
-    private com.squareup.okhttp.Call doctorDeleteByIdCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for xrayDeleteById */
+    private com.squareup.okhttp.Call xrayDeleteByIdCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'id' is set
         if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling doctorDeleteById(Async)");
+            throw new ApiException("Missing the required parameter 'id' when calling xrayDeleteById(Async)");
         }
         
 
         // create path and map variables
-        String localVarPath = "/Doctor/{id}".replaceAll("\\{format\\}","json")
+        String localVarPath = "/Xray/{id}".replaceAll("\\{format\\}","json")
         .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -202,7 +202,7 @@ public class DoctorApi {
         if(progressListener != null) {
             apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                public com.squareup.okhttp.Response intercept(Chain chain) throws IOException {
                     com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
@@ -222,8 +222,8 @@ public class DoctorApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object doctorDeleteById(String id) throws ApiException {
-        ApiResponse<Object> resp = doctorDeleteByIdWithHttpInfo(id);
+    public Object xrayDeleteById(String id) throws ApiException {
+        ApiResponse<Object> resp = xrayDeleteByIdWithHttpInfo(id);
         return resp.getData();
     }
 
@@ -234,8 +234,8 @@ public class DoctorApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> doctorDeleteByIdWithHttpInfo(String id) throws ApiException {
-        com.squareup.okhttp.Call call = doctorDeleteByIdCall(id, null, null);
+    public ApiResponse<Object> xrayDeleteByIdWithHttpInfo(String id) throws ApiException {
+        com.squareup.okhttp.Call call = xrayDeleteByIdCall(id, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -248,7 +248,7 @@ public class DoctorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call doctorDeleteByIdAsync(String id, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call xrayDeleteByIdAsync(String id, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -269,23 +269,23 @@ public class DoctorApi {
             };
         }
 
-        com.squareup.okhttp.Call call = doctorDeleteByIdCall(id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = xrayDeleteByIdCall(id, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for doctorExists */
-    private com.squareup.okhttp.Call doctorExistsCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for xrayExists */
+    private com.squareup.okhttp.Call xrayExistsCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'id' is set
         if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling doctorExists(Async)");
+            throw new ApiException("Missing the required parameter 'id' when calling xrayExists(Async)");
         }
         
 
         // create path and map variables
-        String localVarPath = "/Doctor/{id}".replaceAll("\\{format\\}","json")
+        String localVarPath = "/Xray/{id}".replaceAll("\\{format\\}","json")
         .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -309,7 +309,7 @@ public class DoctorApi {
         if(progressListener != null) {
             apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                public com.squareup.okhttp.Response intercept(Chain chain) throws IOException {
                     com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
@@ -329,8 +329,8 @@ public class DoctorApi {
      * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse200 doctorExists(String id) throws ApiException {
-        ApiResponse<InlineResponse200> resp = doctorExistsWithHttpInfo(id);
+    public InlineResponse200 xrayExists(String id) throws ApiException {
+        ApiResponse<InlineResponse200> resp = xrayExistsWithHttpInfo(id);
         return resp.getData();
     }
 
@@ -341,8 +341,8 @@ public class DoctorApi {
      * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse200> doctorExistsWithHttpInfo(String id) throws ApiException {
-        com.squareup.okhttp.Call call = doctorExistsCall(id, null, null);
+    public ApiResponse<InlineResponse200> xrayExistsWithHttpInfo(String id) throws ApiException {
+        com.squareup.okhttp.Call call = xrayExistsCall(id, null, null);
         Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -355,7 +355,7 @@ public class DoctorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call doctorExistsAsync(String id, final ApiCallback<InlineResponse200> callback) throws ApiException {
+    public com.squareup.okhttp.Call xrayExistsAsync(String id, final ApiCallback<InlineResponse200> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -376,18 +376,18 @@ public class DoctorApi {
             };
         }
 
-        com.squareup.okhttp.Call call = doctorExistsCall(id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = xrayExistsCall(id, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for doctorFind */
-    private com.squareup.okhttp.Call doctorFindCall(String filter, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for xrayFind */
+    private com.squareup.okhttp.Call xrayFindCall(String filter, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
         // create path and map variables
-        String localVarPath = "/Doctor".replaceAll("\\{format\\}","json");
+        String localVarPath = "/Xray".replaceAll("\\{format\\}","json");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         if (filter != null)
@@ -412,7 +412,7 @@ public class DoctorApi {
         if(progressListener != null) {
             apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                public com.squareup.okhttp.Response intercept(Chain chain) throws IOException {
                     com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
@@ -429,11 +429,11 @@ public class DoctorApi {
      * Find all instances of the model matched by filter from the data source.
      * 
      * @param filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return List&lt;Doctor&gt;
+     * @return List&lt;Xray&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Doctor> doctorFind(String filter) throws ApiException {
-        ApiResponse<List<Doctor>> resp = doctorFindWithHttpInfo(filter);
+    public List<Xray> xrayFind(String filter) throws ApiException {
+        ApiResponse<List<Xray>> resp = xrayFindWithHttpInfo(filter);
         return resp.getData();
     }
 
@@ -441,12 +441,12 @@ public class DoctorApi {
      * Find all instances of the model matched by filter from the data source.
      * 
      * @param filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return ApiResponse&lt;List&lt;Doctor&gt;&gt;
+     * @return ApiResponse&lt;List&lt;Xray&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Doctor>> doctorFindWithHttpInfo(String filter) throws ApiException {
-        com.squareup.okhttp.Call call = doctorFindCall(filter, null, null);
-        Type localVarReturnType = new TypeToken<List<Doctor>>(){}.getType();
+    public ApiResponse<List<Xray>> xrayFindWithHttpInfo(String filter) throws ApiException {
+        com.squareup.okhttp.Call call = xrayFindCall(filter, null, null);
+        Type localVarReturnType = new TypeToken<List<Xray>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -458,7 +458,7 @@ public class DoctorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call doctorFindAsync(String filter, final ApiCallback<List<Doctor>> callback) throws ApiException {
+    public com.squareup.okhttp.Call xrayFindAsync(String filter, final ApiCallback<List<Xray>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -479,23 +479,23 @@ public class DoctorApi {
             };
         }
 
-        com.squareup.okhttp.Call call = doctorFindCall(filter, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<Doctor>>(){}.getType();
+        com.squareup.okhttp.Call call = xrayFindCall(filter, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<List<Xray>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for doctorFindById */
-    private com.squareup.okhttp.Call doctorFindByIdCall(String id, String filter, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for xrayFindById */
+    private com.squareup.okhttp.Call xrayFindByIdCall(String id, String filter, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'id' is set
         if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling doctorFindById(Async)");
+            throw new ApiException("Missing the required parameter 'id' when calling xrayFindById(Async)");
         }
         
 
         // create path and map variables
-        String localVarPath = "/Doctor/{id}".replaceAll("\\{format\\}","json")
+        String localVarPath = "/Xray/{id}".replaceAll("\\{format\\}","json")
         .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -521,7 +521,7 @@ public class DoctorApi {
         if(progressListener != null) {
             apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                public com.squareup.okhttp.Response intercept(Chain chain) throws IOException {
                     com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
@@ -539,11 +539,11 @@ public class DoctorApi {
      * 
      * @param id Model id (required)
      * @param filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return Doctor
+     * @return Xray
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Doctor doctorFindById(String id, String filter) throws ApiException {
-        ApiResponse<Doctor> resp = doctorFindByIdWithHttpInfo(id, filter);
+    public Xray xrayFindById(String id, String filter) throws ApiException {
+        ApiResponse<Xray> resp = xrayFindByIdWithHttpInfo(id, filter);
         return resp.getData();
     }
 
@@ -552,12 +552,12 @@ public class DoctorApi {
      * 
      * @param id Model id (required)
      * @param filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return ApiResponse&lt;Doctor&gt;
+     * @return ApiResponse&lt;Xray&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Doctor> doctorFindByIdWithHttpInfo(String id, String filter) throws ApiException {
-        com.squareup.okhttp.Call call = doctorFindByIdCall(id, filter, null, null);
-        Type localVarReturnType = new TypeToken<Doctor>(){}.getType();
+    public ApiResponse<Xray> xrayFindByIdWithHttpInfo(String id, String filter) throws ApiException {
+        com.squareup.okhttp.Call call = xrayFindByIdCall(id, filter, null, null);
+        Type localVarReturnType = new TypeToken<Xray>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -570,7 +570,7 @@ public class DoctorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call doctorFindByIdAsync(String id, String filter, final ApiCallback<Doctor> callback) throws ApiException {
+    public com.squareup.okhttp.Call xrayFindByIdAsync(String id, String filter, final ApiCallback<Xray> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -591,23 +591,23 @@ public class DoctorApi {
             };
         }
 
-        com.squareup.okhttp.Call call = doctorFindByIdCall(id, filter, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Doctor>(){}.getType();
+        com.squareup.okhttp.Call call = xrayFindByIdCall(id, filter, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Xray>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for doctorReplaceById */
-    private com.squareup.okhttp.Call doctorReplaceByIdCall(String id, Doctor data, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for xrayReplaceById */
+    private com.squareup.okhttp.Call xrayReplaceByIdCall(String id, Xray data, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = data;
         
         // verify the required parameter 'id' is set
         if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling doctorReplaceById(Async)");
+            throw new ApiException("Missing the required parameter 'id' when calling xrayReplaceById(Async)");
         }
         
 
         // create path and map variables
-        String localVarPath = "/Doctor/{id}".replaceAll("\\{format\\}","json")
+        String localVarPath = "/Xray/{id}".replaceAll("\\{format\\}","json")
         .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -631,7 +631,7 @@ public class DoctorApi {
         if(progressListener != null) {
             apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                public com.squareup.okhttp.Response intercept(Chain chain) throws IOException {
                     com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
@@ -649,11 +649,11 @@ public class DoctorApi {
      * 
      * @param id Model id (required)
      * @param data Model instance data (optional)
-     * @return Doctor
+     * @return Xray
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Doctor doctorReplaceById(String id, Doctor data) throws ApiException {
-        ApiResponse<Doctor> resp = doctorReplaceByIdWithHttpInfo(id, data);
+    public Xray xrayReplaceById(String id, Xray data) throws ApiException {
+        ApiResponse<Xray> resp = xrayReplaceByIdWithHttpInfo(id, data);
         return resp.getData();
     }
 
@@ -662,12 +662,12 @@ public class DoctorApi {
      * 
      * @param id Model id (required)
      * @param data Model instance data (optional)
-     * @return ApiResponse&lt;Doctor&gt;
+     * @return ApiResponse&lt;Xray&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Doctor> doctorReplaceByIdWithHttpInfo(String id, Doctor data) throws ApiException {
-        com.squareup.okhttp.Call call = doctorReplaceByIdCall(id, data, null, null);
-        Type localVarReturnType = new TypeToken<Doctor>(){}.getType();
+    public ApiResponse<Xray> xrayReplaceByIdWithHttpInfo(String id, Xray data) throws ApiException {
+        com.squareup.okhttp.Call call = xrayReplaceByIdCall(id, data, null, null);
+        Type localVarReturnType = new TypeToken<Xray>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -680,7 +680,7 @@ public class DoctorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call doctorReplaceByIdAsync(String id, Doctor data, final ApiCallback<Doctor> callback) throws ApiException {
+    public com.squareup.okhttp.Call xrayReplaceByIdAsync(String id, Xray data, final ApiCallback<Xray> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -701,8 +701,8 @@ public class DoctorApi {
             };
         }
 
-        com.squareup.okhttp.Call call = doctorReplaceByIdCall(id, data, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Doctor>(){}.getType();
+        com.squareup.okhttp.Call call = xrayReplaceByIdCall(id, data, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Xray>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

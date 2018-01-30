@@ -141,9 +141,6 @@ public class CheckupHistory   {
   @SerializedName("assetId")
   private String assetId = null;
 
-  @SerializedName("authorized")
-  private List<String> authorized = new ArrayList<String>();
-
   @SerializedName("patient")
   private String patient = null;
 
@@ -762,29 +759,6 @@ public class CheckupHistory   {
     this.assetId = assetId;
   }
 
-  public CheckupHistory authorized(List<String> authorized) {
-    this.authorized = authorized;
-    return this;
-  }
-
-  public CheckupHistory addAuthorizedItem(String authorizedItem) {
-    this.authorized.add(authorizedItem);
-    return this;
-  }
-
-   /**
-   * Get authorized
-   * @return authorized
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<String> getAuthorized() {
-    return authorized;
-  }
-
-  public void setAuthorized(List<String> authorized) {
-    this.authorized = authorized;
-  }
-
   public CheckupHistory patient(String patient) {
     this.patient = patient;
     return this;
@@ -865,14 +839,13 @@ public class CheckupHistory   {
         Objects.equals(this.calciumScoreImage, checkupHistory.calciumScoreImage) &&
         Objects.equals(this.dateTimeUpdate, checkupHistory.dateTimeUpdate) &&
         Objects.equals(this.assetId, checkupHistory.assetId) &&
-        Objects.equals(this.authorized, checkupHistory.authorized) &&
         Objects.equals(this.patient, checkupHistory.patient) &&
         Objects.equals(this.healthCareProvider, checkupHistory.healthCareProvider);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(PropertyClass, checkupHistoryId, dateTimeServe, pulse, pressure, cbcWbc, hct, hb, ph, uaWbc, rbc, alm, sugar, spgr, fbs, bun, creatinine, uric, chlt, trig, hdl, ldl, alk, sgot, sgpt, hba1c, eos, pmn, lym, mono, calciumScoreResult, calciumScoreImage, dateTimeUpdate, assetId, authorized, patient, healthCareProvider);
+    return Objects.hash(PropertyClass, checkupHistoryId, dateTimeServe, pulse, pressure, cbcWbc, hct, hb, ph, uaWbc, rbc, alm, sugar, spgr, fbs, bun, creatinine, uric, chlt, trig, hdl, ldl, alk, sgot, sgpt, hba1c, eos, pmn, lym, mono, calciumScoreResult, calciumScoreImage, dateTimeUpdate, assetId, patient, healthCareProvider);
   }
 
   @Override
@@ -914,7 +887,6 @@ public class CheckupHistory   {
     sb.append("    calciumScoreImage: ").append(toIndentedString(calciumScoreImage)).append("\n");
     sb.append("    dateTimeUpdate: ").append(toIndentedString(dateTimeUpdate)).append("\n");
     sb.append("    assetId: ").append(toIndentedString(assetId)).append("\n");
-    sb.append("    authorized: ").append(toIndentedString(authorized)).append("\n");
     sb.append("    patient: ").append(toIndentedString(patient)).append("\n");
     sb.append("    healthCareProvider: ").append(toIndentedString(healthCareProvider)).append("\n");
     sb.append("}");

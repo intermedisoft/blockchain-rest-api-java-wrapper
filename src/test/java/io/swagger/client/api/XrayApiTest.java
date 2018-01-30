@@ -26,7 +26,8 @@
 package io.swagger.client.api;
 
 import io.swagger.client.ApiException;
-import io.swagger.client.model.CreateDiagHistory;
+import io.swagger.client.model.Xray;
+import io.swagger.client.model.InlineResponse200;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -35,11 +36,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for CreateDiagHistoryApi
+ * API tests for XrayApi
  */
-public class CreateDiagHistoryApiTest {
+public class XrayApiTest {
 
-    private final CreateDiagHistoryApi api = new CreateDiagHistoryApi();
+    private final XrayApi api = new XrayApi();
 
     
     /**
@@ -51,9 +52,41 @@ public class CreateDiagHistoryApiTest {
      *          if the Api call fails
      */
     @Test
-    public void createDiagHistoryCreateTest() throws ApiException {
-        CreateDiagHistory data = null;
-        // CreateDiagHistory response = api.createDiagHistoryCreate(data);
+    public void xrayCreateTest() throws ApiException {
+        Xray data = null;
+        // Xray response = api.xrayCreate(data);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Delete a model instance by {{id}} from the data source.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void xrayDeleteByIdTest() throws ApiException {
+        String id = null;
+        // Object response = api.xrayDeleteById(id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Check whether a model instance exists in the data source.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void xrayExistsTest() throws ApiException {
+        String id = null;
+        // InlineResponse200 response = api.xrayExists(id);
 
         // TODO: test validations
     }
@@ -67,9 +100,9 @@ public class CreateDiagHistoryApiTest {
      *          if the Api call fails
      */
     @Test
-    public void createDiagHistoryFindTest() throws ApiException {
+    public void xrayFindTest() throws ApiException {
         String filter = null;
-        // List<CreateDiagHistory> response = api.createDiagHistoryFind(filter);
+        // List<Xray> response = api.xrayFind(filter);
 
         // TODO: test validations
     }
@@ -83,10 +116,27 @@ public class CreateDiagHistoryApiTest {
      *          if the Api call fails
      */
     @Test
-    public void createDiagHistoryFindByIdTest() throws ApiException {
+    public void xrayFindByIdTest() throws ApiException {
         String id = null;
         String filter = null;
-        // CreateDiagHistory response = api.createDiagHistoryFindById(id, filter);
+        // Xray response = api.xrayFindById(id, filter);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Replace attributes for a model instance and persist it into the data source.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void xrayReplaceByIdTest() throws ApiException {
+        String id = null;
+        Xray data = null;
+        // Xray response = api.xrayReplaceById(id, data);
 
         // TODO: test validations
     }

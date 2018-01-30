@@ -7,38 +7,37 @@ Name | Type | Description | Notes
 **PropertyClass** | **String** | The class identifier for this type |  [optional]
 **checkupHistoryId** | **String** |  | 
 **dateTimeServe** | **String** |  | 
-**pulse** | **String** |  | 
-**pressure** | **String** |  | 
-**cbcWbc** | **String** |  | 
-**hct** | **String** |  | 
-**hb** | **String** |  | 
-**ph** | **String** |  | 
-**uaWbc** | **String** |  | 
-**rbc** | **String** |  | 
-**alm** | **String** |  | 
-**sugar** | **String** |  | 
-**spgr** | **String** |  | 
-**fbs** | **String** |  | 
-**bun** | **String** |  | 
-**creatinine** | **String** |  | 
-**uric** | **String** |  | 
-**chlt** | **String** |  | 
-**trig** | **String** |  | 
-**hdl** | **String** |  | 
-**ldl** | **String** |  | 
-**alk** | **String** |  | 
-**sgot** | **String** |  | 
-**sgpt** | **String** |  | 
-**hba1c** | **String** |  | 
-**eos** | **String** |  | 
-**pmn** | **String** |  | 
-**lym** | **String** |  | 
-**mono** | **String** |  | 
+**pulse** | **String** |  |  [optional]
+**pressure** | **String** |  |  [optional]
+**cbcWbc** | **String** |  |  [optional]
+**hct** | **String** |  |  [optional]
+**hb** | **String** |  |  [optional]
+**ph** | **String** |  |  [optional]
+**uaWbc** | **String** |  |  [optional]
+**rbc** | **String** |  |  [optional]
+**alm** | **String** |  |  [optional]
+**sugar** | **String** |  |  [optional]
+**spgr** | **String** |  |  [optional]
+**fbs** | **String** |  |  [optional]
+**bun** | **String** |  |  [optional]
+**creatinine** | **String** |  |  [optional]
+**uric** | **String** |  |  [optional]
+**chlt** | **String** |  |  [optional]
+**trig** | **String** |  |  [optional]
+**hdl** | **String** |  |  [optional]
+**ldl** | **String** |  |  [optional]
+**alk** | **String** |  |  [optional]
+**sgot** | **String** |  |  [optional]
+**sgpt** | **String** |  |  [optional]
+**hba1c** | **String** |  |  [optional]
+**eos** | **String** |  |  [optional]
+**pmn** | **String** |  |  [optional]
+**lym** | **String** |  |  [optional]
+**mono** | **String** |  |  [optional]
+**calciumScoreResult** | **String** |  |  [optional]
+**calciumScoreImage** | **String** |  |  [optional]
 **dateTimeUpdate** | **String** |  | 
-**visit** | [**XAny**](XAny.md) | The identifier of an instance of visit | 
-**doctorId** | [**XAny**](XAny.md) | The identifier of an instance of doctorId |  [optional]
 **assetId** | **String** | The instance identifier for this type | 
-**authorized** | **List&lt;String&gt;** |  |  [optional]
 **patient** | [**XAny**](XAny.md) | The identifier of an instance of patient | 
 **healthCareProvider** | [**XAny**](XAny.md) | The identifier of an instance of healthCareProvider | 
 

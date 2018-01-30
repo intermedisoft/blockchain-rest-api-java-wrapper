@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 ## Enum: PermissionTypeEnum
 Name | Value
 ---- | -----
+NOOP | &quot;NOOP&quot;
 REQUEST | &quot;REQUEST&quot;
 GRANT | &quot;GRANT&quot;
 DENY | &quot;DENY&quot;

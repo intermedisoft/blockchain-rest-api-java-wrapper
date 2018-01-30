@@ -7,11 +7,11 @@ Method | HTTP request | Description
 [**queryListAllCheckupHistoryOfPatient**](QueryApi.md#queryListAllCheckupHistoryOfPatient) | **GET** /queries/listAllCheckupHistoryOfPatient | Show all checkup history for specified patient
 [**queryListAllDiagHistoryOfPatient**](QueryApi.md#queryListAllDiagHistoryOfPatient) | **GET** /queries/listAllDiagHistoryOfPatient | Show all diagnostic history for specified patient
 [**queryListAllDrugHistoryOfPatient**](QueryApi.md#queryListAllDrugHistoryOfPatient) | **GET** /queries/listAllDrugHistoryOfPatient | Show all drug history for specified patient
-[**queryListAllGrantedPermission**](QueryApi.md#queryListAllGrantedPermission) | **GET** /queries/listAllGrantedPermission | List all valid permission grant
-[**queryListAllPendingPermissionRequest**](QueryApi.md#queryListAllPendingPermissionRequest) | **GET** /queries/listAllPendingPermissionRequest | Get list of pending permission request of patient
 [**queryListAllProcedureHistoryOfPatient**](QueryApi.md#queryListAllProcedureHistoryOfPatient) | **GET** /queries/listAllProcedureHistoryOfPatient | Show all procedure history for specified patient
 [**queryListAllProtectedAssets**](QueryApi.md#queryListAllProtectedAssets) | **GET** /queries/listAllProtectedAssets | List all protected assets
+[**queryListAllRequestWithNoResponse**](QueryApi.md#queryListAllRequestWithNoResponse) | **GET** /queries/listAllRequestWithNoResponse | List all REQUEST PermissionLog that not yet response.
 [**queryListAllServiceHistoryOfPatient**](QueryApi.md#queryListAllServiceHistoryOfPatient) | **GET** /queries/listAllServiceHistoryOfPatient | Show all service history for specified patient
+[**queryListAllVaccinationOfPatient**](QueryApi.md#queryListAllVaccinationOfPatient) | **GET** /queries/listAllVaccinationOfPatient | Show all vaccination for specified patient
 
 
 <a name="queryListAllCheckupHistoryOfPatient"></a>
@@ -143,84 +143,6 @@ No authorization required
  - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
  - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
 
-<a name="queryListAllGrantedPermission"></a>
-# **queryListAllGrantedPermission**
-> List&lt;Patient&gt; queryListAllGrantedPermission()
-
-List all valid permission grant
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.QueryApi;
-
-
-QueryApi apiInstance = new QueryApi();
-try {
-    List<Patient> result = apiInstance.queryListAllGrantedPermission();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling QueryApi#queryListAllGrantedPermission");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;Patient&gt;**](Patient.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-<a name="queryListAllPendingPermissionRequest"></a>
-# **queryListAllPendingPermissionRequest**
-> List&lt;Patient&gt; queryListAllPendingPermissionRequest()
-
-Get list of pending permission request of patient
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.QueryApi;
-
-
-QueryApi apiInstance = new QueryApi();
-try {
-    List<Patient> result = apiInstance.queryListAllPendingPermissionRequest();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling QueryApi#queryListAllPendingPermissionRequest");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;Patient&gt;**](Patient.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
 <a name="queryListAllProcedureHistoryOfPatient"></a>
 # **queryListAllProcedureHistoryOfPatient**
 > List&lt;ProcedureHistory&gt; queryListAllProcedureHistoryOfPatient(patientIdParam)
@@ -303,6 +225,51 @@ No authorization required
  - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
  - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
 
+<a name="queryListAllRequestWithNoResponse"></a>
+# **queryListAllRequestWithNoResponse**
+> List&lt;PermissionLog&gt; queryListAllRequestWithNoResponse(patientIdParam, hcpIdParam)
+
+List all REQUEST PermissionLog that not yet response.
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.QueryApi;
+
+
+QueryApi apiInstance = new QueryApi();
+String patientIdParam = "patientIdParam_example"; // String | 
+String hcpIdParam = "hcpIdParam_example"; // String | 
+try {
+    List<PermissionLog> result = apiInstance.queryListAllRequestWithNoResponse(patientIdParam, hcpIdParam);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling QueryApi#queryListAllRequestWithNoResponse");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **patientIdParam** | **String**|  |
+ **hcpIdParam** | **String**|  |
+
+### Return type
+
+[**List&lt;PermissionLog&gt;**](PermissionLog.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
 <a name="queryListAllServiceHistoryOfPatient"></a>
 # **queryListAllServiceHistoryOfPatient**
 > List&lt;ServiceHistory&gt; queryListAllServiceHistoryOfPatient(patientIdParam)
@@ -336,6 +303,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;ServiceHistory&gt;**](ServiceHistory.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+<a name="queryListAllVaccinationOfPatient"></a>
+# **queryListAllVaccinationOfPatient**
+> List&lt;Vaccination&gt; queryListAllVaccinationOfPatient(patientIdParam)
+
+Show all vaccination for specified patient
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.QueryApi;
+
+
+QueryApi apiInstance = new QueryApi();
+String patientIdParam = "patientIdParam_example"; // String | 
+try {
+    List<Vaccination> result = apiInstance.queryListAllVaccinationOfPatient(patientIdParam);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling QueryApi#queryListAllVaccinationOfPatient");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **patientIdParam** | **String**|  |
+
+### Return type
+
+[**List&lt;Vaccination&gt;**](Vaccination.md)
 
 ### Authorization
 

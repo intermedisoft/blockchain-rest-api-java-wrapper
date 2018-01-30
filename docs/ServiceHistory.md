@@ -8,9 +8,8 @@ Name | Type | Description | Notes
 **serviceId** | **String** |  | 
 **dateTimeService** | [**DateTime**](DateTime.md) |  | 
 **dateTimeUpdate** | [**DateTime**](DateTime.md) |  | 
-**insuranceId** | **String** |  | 
+**insuranceId** | **String** |  |  [optional]
 **assetId** | **String** | The instance identifier for this type | 
-**authorized** | **List&lt;String&gt;** |  |  [optional]
 **patient** | [**XAny**](XAny.md) | The identifier of an instance of patient | 
 **healthCareProvider** | [**XAny**](XAny.md) | The identifier of an instance of healthCareProvider | 
 

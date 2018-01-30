@@ -26,9 +26,9 @@ Name | Type | Description | Notes
 **censusHomeId** | **String** |  |  [optional]
 **dateTimeUpdate** | [**DateTime**](DateTime.md) |  | 
 **picture** | **String** |  |  [optional]
-**foods** | [**List&lt;Food&gt;**](Food.md) |  | 
-**exercises** | [**List&lt;Exercise&gt;**](Exercise.md) |  | 
-**lifestyles** | [**List&lt;Lifestyle&gt;**](Lifestyle.md) |  | 
+**foods** | [**List&lt;Food&gt;**](Food.md) |  |  [optional]
+**exercises** | [**List&lt;Exercise&gt;**](Exercise.md) |  |  [optional]
+**lifestyles** | [**List&lt;Lifestyle&gt;**](Lifestyle.md) |  |  [optional]
 **pendingHcpPermissionRequest** | [**List&lt;XAny&gt;**](XAny.md) | The identifier of an instance of pendingHcpPermissionRequest |  [optional]
 **authorizedHcpPermissionRequest** | [**List&lt;XAny&gt;**](XAny.md) | The identifier of an instance of authorizedHcpPermissionRequest |  [optional]
 

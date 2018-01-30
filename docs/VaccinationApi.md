@@ -1,20 +1,20 @@
-# DoctorApi
+# VaccinationApi
 
 All URIs are relative to *https://localhost/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**doctorCreate**](DoctorApi.md#doctorCreate) | **POST** /Doctor | Create a new instance of the model and persist it into the data source.
-[**doctorDeleteById**](DoctorApi.md#doctorDeleteById) | **DELETE** /Doctor/{id} | Delete a model instance by {{id}} from the data source.
-[**doctorExists**](DoctorApi.md#doctorExists) | **HEAD** /Doctor/{id} | Check whether a model instance exists in the data source.
-[**doctorFind**](DoctorApi.md#doctorFind) | **GET** /Doctor | Find all instances of the model matched by filter from the data source.
-[**doctorFindById**](DoctorApi.md#doctorFindById) | **GET** /Doctor/{id} | Find a model instance by {{id}} from the data source.
-[**doctorReplaceById**](DoctorApi.md#doctorReplaceById) | **PUT** /Doctor/{id} | Replace attributes for a model instance and persist it into the data source.
+[**vaccinationCreate**](VaccinationApi.md#vaccinationCreate) | **POST** /Vaccination | Create a new instance of the model and persist it into the data source.
+[**vaccinationDeleteById**](VaccinationApi.md#vaccinationDeleteById) | **DELETE** /Vaccination/{id} | Delete a model instance by {{id}} from the data source.
+[**vaccinationExists**](VaccinationApi.md#vaccinationExists) | **HEAD** /Vaccination/{id} | Check whether a model instance exists in the data source.
+[**vaccinationFind**](VaccinationApi.md#vaccinationFind) | **GET** /Vaccination | Find all instances of the model matched by filter from the data source.
+[**vaccinationFindById**](VaccinationApi.md#vaccinationFindById) | **GET** /Vaccination/{id} | Find a model instance by {{id}} from the data source.
+[**vaccinationReplaceById**](VaccinationApi.md#vaccinationReplaceById) | **PUT** /Vaccination/{id} | Replace attributes for a model instance and persist it into the data source.
 
 
-<a name="doctorCreate"></a>
-# **doctorCreate**
-> Doctor doctorCreate(data)
+<a name="vaccinationCreate"></a>
+# **vaccinationCreate**
+> Vaccination vaccinationCreate(data)
 
 Create a new instance of the model and persist it into the data source.
 
@@ -22,16 +22,16 @@ Create a new instance of the model and persist it into the data source.
 ```java
 // Import classes:
 //import io.swagger.client.ApiException;
-//import io.swagger.client.api.DoctorApi;
+//import io.swagger.client.api.VaccinationApi;
 
 
-DoctorApi apiInstance = new DoctorApi();
-Doctor data = new Doctor(); // Doctor | Model instance data
+VaccinationApi apiInstance = new VaccinationApi();
+Vaccination data = new Vaccination(); // Vaccination | Model instance data
 try {
-    Doctor result = apiInstance.doctorCreate(data);
+    Vaccination result = apiInstance.vaccinationCreate(data);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DoctorApi#doctorCreate");
+    System.err.println("Exception when calling VaccinationApi#vaccinationCreate");
     e.printStackTrace();
 }
 ```
@@ -40,11 +40,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Doctor**](Doctor.md)| Model instance data | [optional]
+ **data** | [**Vaccination**](Vaccination.md)| Model instance data | [optional]
 
 ### Return type
 
-[**Doctor**](Doctor.md)
+[**Vaccination**](Vaccination.md)
 
 ### Authorization
 
@@ -55,9 +55,9 @@ No authorization required
  - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
  - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
 
-<a name="doctorDeleteById"></a>
-# **doctorDeleteById**
-> Object doctorDeleteById(id)
+<a name="vaccinationDeleteById"></a>
+# **vaccinationDeleteById**
+> Object vaccinationDeleteById(id)
 
 Delete a model instance by {{id}} from the data source.
 
@@ -65,16 +65,16 @@ Delete a model instance by {{id}} from the data source.
 ```java
 // Import classes:
 //import io.swagger.client.ApiException;
-//import io.swagger.client.api.DoctorApi;
+//import io.swagger.client.api.VaccinationApi;
 
 
-DoctorApi apiInstance = new DoctorApi();
+VaccinationApi apiInstance = new VaccinationApi();
 String id = "id_example"; // String | Model id
 try {
-    Object result = apiInstance.doctorDeleteById(id);
+    Object result = apiInstance.vaccinationDeleteById(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DoctorApi#doctorDeleteById");
+    System.err.println("Exception when calling VaccinationApi#vaccinationDeleteById");
     e.printStackTrace();
 }
 ```
@@ -98,9 +98,9 @@ No authorization required
  - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
  - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
 
-<a name="doctorExists"></a>
-# **doctorExists**
-> InlineResponse200 doctorExists(id)
+<a name="vaccinationExists"></a>
+# **vaccinationExists**
+> InlineResponse200 vaccinationExists(id)
 
 Check whether a model instance exists in the data source.
 
@@ -108,16 +108,16 @@ Check whether a model instance exists in the data source.
 ```java
 // Import classes:
 //import io.swagger.client.ApiException;
-//import io.swagger.client.api.DoctorApi;
+//import io.swagger.client.api.VaccinationApi;
 
 
-DoctorApi apiInstance = new DoctorApi();
+VaccinationApi apiInstance = new VaccinationApi();
 String id = "id_example"; // String | Model id
 try {
-    InlineResponse200 result = apiInstance.doctorExists(id);
+    InlineResponse200 result = apiInstance.vaccinationExists(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DoctorApi#doctorExists");
+    System.err.println("Exception when calling VaccinationApi#vaccinationExists");
     e.printStackTrace();
 }
 ```
@@ -141,9 +141,9 @@ No authorization required
  - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
  - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
 
-<a name="doctorFind"></a>
-# **doctorFind**
-> List&lt;Doctor&gt; doctorFind(filter)
+<a name="vaccinationFind"></a>
+# **vaccinationFind**
+> List&lt;Vaccination&gt; vaccinationFind(filter)
 
 Find all instances of the model matched by filter from the data source.
 
@@ -151,16 +151,16 @@ Find all instances of the model matched by filter from the data source.
 ```java
 // Import classes:
 //import io.swagger.client.ApiException;
-//import io.swagger.client.api.DoctorApi;
+//import io.swagger.client.api.VaccinationApi;
 
 
-DoctorApi apiInstance = new DoctorApi();
+VaccinationApi apiInstance = new VaccinationApi();
 String filter = "filter_example"; // String | Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})
 try {
-    List<Doctor> result = apiInstance.doctorFind(filter);
+    List<Vaccination> result = apiInstance.vaccinationFind(filter);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DoctorApi#doctorFind");
+    System.err.println("Exception when calling VaccinationApi#vaccinationFind");
     e.printStackTrace();
 }
 ```
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Doctor&gt;**](Doctor.md)
+[**List&lt;Vaccination&gt;**](Vaccination.md)
 
 ### Authorization
 
@@ -184,9 +184,9 @@ No authorization required
  - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
  - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
 
-<a name="doctorFindById"></a>
-# **doctorFindById**
-> Doctor doctorFindById(id, filter)
+<a name="vaccinationFindById"></a>
+# **vaccinationFindById**
+> Vaccination vaccinationFindById(id, filter)
 
 Find a model instance by {{id}} from the data source.
 
@@ -194,17 +194,17 @@ Find a model instance by {{id}} from the data source.
 ```java
 // Import classes:
 //import io.swagger.client.ApiException;
-//import io.swagger.client.api.DoctorApi;
+//import io.swagger.client.api.VaccinationApi;
 
 
-DoctorApi apiInstance = new DoctorApi();
+VaccinationApi apiInstance = new VaccinationApi();
 String id = "id_example"; // String | Model id
 String filter = "filter_example"; // String | Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})
 try {
-    Doctor result = apiInstance.doctorFindById(id, filter);
+    Vaccination result = apiInstance.vaccinationFindById(id, filter);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DoctorApi#doctorFindById");
+    System.err.println("Exception when calling VaccinationApi#vaccinationFindById");
     e.printStackTrace();
 }
 ```
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Doctor**](Doctor.md)
+[**Vaccination**](Vaccination.md)
 
 ### Authorization
 
@@ -229,9 +229,9 @@ No authorization required
  - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
  - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
 
-<a name="doctorReplaceById"></a>
-# **doctorReplaceById**
-> Doctor doctorReplaceById(id, data)
+<a name="vaccinationReplaceById"></a>
+# **vaccinationReplaceById**
+> Vaccination vaccinationReplaceById(id, data)
 
 Replace attributes for a model instance and persist it into the data source.
 
@@ -239,17 +239,17 @@ Replace attributes for a model instance and persist it into the data source.
 ```java
 // Import classes:
 //import io.swagger.client.ApiException;
-//import io.swagger.client.api.DoctorApi;
+//import io.swagger.client.api.VaccinationApi;
 
 
-DoctorApi apiInstance = new DoctorApi();
+VaccinationApi apiInstance = new VaccinationApi();
 String id = "id_example"; // String | Model id
-Doctor data = new Doctor(); // Doctor | Model instance data
+Vaccination data = new Vaccination(); // Vaccination | Model instance data
 try {
-    Doctor result = apiInstance.doctorReplaceById(id, data);
+    Vaccination result = apiInstance.vaccinationReplaceById(id, data);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DoctorApi#doctorReplaceById");
+    System.err.println("Exception when calling VaccinationApi#vaccinationReplaceById");
     e.printStackTrace();
 }
 ```
@@ -259,11 +259,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Model id |
- **data** | [**Doctor**](Doctor.md)| Model instance data | [optional]
+ **data** | [**Vaccination**](Vaccination.md)| Model instance data | [optional]
 
 ### Return type
 
-[**Doctor**](Doctor.md)
+[**Vaccination**](Vaccination.md)
 
 ### Authorization
 

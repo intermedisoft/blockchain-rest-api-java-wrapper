@@ -29,40 +29,32 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import org.joda.time.DateTime;
 
 
 /**
- * An asset named ProcedureHistory
+ * An asset named Xray
  */
-@ApiModel(description = "An asset named ProcedureHistory")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-12-22T10:20:50.211+07:00")
-public class ProcedureHistory   {
+@ApiModel(description = "An asset named Xray")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-30T11:08:37.226+07:00")
+public class Xray   {
   @SerializedName("$class")
-  private String PropertyClass = "com.depa.blockchain.assets.ProcedureHistory";
+  private String PropertyClass = "com.depa.blockchain.assets.Xray";
 
-  @SerializedName("procedureId")
-  private String procedureId = null;
+  @SerializedName("xrayName")
+  private String xrayName = null;
+
+  @SerializedName("xrayResult")
+  private String xrayResult = null;
+
+  @SerializedName("xrayImage")
+  private String xrayImage = null;
 
   @SerializedName("dateTimeService")
   private DateTime dateTimeService = null;
 
-  @SerializedName("opType")
-  private String opType = null;
-
-  @SerializedName("procedureName")
-  private String procedureName = null;
-
   @SerializedName("dateTimeUpdate")
   private DateTime dateTimeUpdate = null;
-
-  @SerializedName("visit")
-  private String visit = null;
-
-  @SerializedName("doctorId")
-  private String doctorId = null;
 
   @SerializedName("assetId")
   private String assetId = null;
@@ -73,7 +65,7 @@ public class ProcedureHistory   {
   @SerializedName("healthCareProvider")
   private String healthCareProvider = null;
 
-  public ProcedureHistory PropertyClass(String PropertyClass) {
+  public Xray PropertyClass(String PropertyClass) {
     this.PropertyClass = PropertyClass;
     return this;
   }
@@ -91,25 +83,61 @@ public class ProcedureHistory   {
     this.PropertyClass = PropertyClass;
   }
 
-  public ProcedureHistory procedureId(String procedureId) {
-    this.procedureId = procedureId;
+  public Xray xrayName(String xrayName) {
+    this.xrayName = xrayName;
     return this;
   }
 
    /**
-   * Get procedureId
-   * @return procedureId
+   * Get xrayName
+   * @return xrayName
   **/
   @ApiModelProperty(example = "null", required = true, value = "")
-  public String getProcedureId() {
-    return procedureId;
+  public String getXrayName() {
+    return xrayName;
   }
 
-  public void setProcedureId(String procedureId) {
-    this.procedureId = procedureId;
+  public void setXrayName(String xrayName) {
+    this.xrayName = xrayName;
   }
 
-  public ProcedureHistory dateTimeService(DateTime dateTimeService) {
+  public Xray xrayResult(String xrayResult) {
+    this.xrayResult = xrayResult;
+    return this;
+  }
+
+   /**
+   * Get xrayResult
+   * @return xrayResult
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public String getXrayResult() {
+    return xrayResult;
+  }
+
+  public void setXrayResult(String xrayResult) {
+    this.xrayResult = xrayResult;
+  }
+
+  public Xray xrayImage(String xrayImage) {
+    this.xrayImage = xrayImage;
+    return this;
+  }
+
+   /**
+   * Get xrayImage
+   * @return xrayImage
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public String getXrayImage() {
+    return xrayImage;
+  }
+
+  public void setXrayImage(String xrayImage) {
+    this.xrayImage = xrayImage;
+  }
+
+  public Xray dateTimeService(DateTime dateTimeService) {
     this.dateTimeService = dateTimeService;
     return this;
   }
@@ -127,43 +155,7 @@ public class ProcedureHistory   {
     this.dateTimeService = dateTimeService;
   }
 
-  public ProcedureHistory opType(String opType) {
-    this.opType = opType;
-    return this;
-  }
-
-   /**
-   * Get opType
-   * @return opType
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "")
-  public String getOpType() {
-    return opType;
-  }
-
-  public void setOpType(String opType) {
-    this.opType = opType;
-  }
-
-  public ProcedureHistory procedureName(String procedureName) {
-    this.procedureName = procedureName;
-    return this;
-  }
-
-   /**
-   * Get procedureName
-   * @return procedureName
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "")
-  public String getProcedureName() {
-    return procedureName;
-  }
-
-  public void setProcedureName(String procedureName) {
-    this.procedureName = procedureName;
-  }
-
-  public ProcedureHistory dateTimeUpdate(DateTime dateTimeUpdate) {
+  public Xray dateTimeUpdate(DateTime dateTimeUpdate) {
     this.dateTimeUpdate = dateTimeUpdate;
     return this;
   }
@@ -181,43 +173,7 @@ public class ProcedureHistory   {
     this.dateTimeUpdate = dateTimeUpdate;
   }
 
-  public ProcedureHistory visit(String visit) {
-    this.visit = visit;
-    return this;
-  }
-
-   /**
-   * The identifier of an instance of visit
-   * @return visit
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "The identifier of an instance of visit")
-  public String getVisit() {
-    return visit;
-  }
-
-  public void setVisit(String visit) {
-    this.visit = visit;
-  }
-
-  public ProcedureHistory doctorId(String doctorId) {
-    this.doctorId = doctorId;
-    return this;
-  }
-
-   /**
-   * The identifier of an instance of doctorId
-   * @return doctorId
-  **/
-  @ApiModelProperty(example = "null", value = "The identifier of an instance of doctorId")
-  public String getDoctorId() {
-    return doctorId;
-  }
-
-  public void setDoctorId(String doctorId) {
-    this.doctorId = doctorId;
-  }
-
-  public ProcedureHistory assetId(String assetId) {
+  public Xray assetId(String assetId) {
     this.assetId = assetId;
     return this;
   }
@@ -235,6 +191,11 @@ public class ProcedureHistory   {
     this.assetId = assetId;
   }
 
+  public Xray patient(String patient) {
+    this.patient = patient;
+    return this;
+  }
+
    /**
    * The identifier of an instance of patient
    * @return patient
@@ -248,7 +209,7 @@ public class ProcedureHistory   {
     this.patient = patient;
   }
 
-  public ProcedureHistory healthCareProvider(String healthCareProvider) {
+  public Xray healthCareProvider(String healthCareProvider) {
     this.healthCareProvider = healthCareProvider;
     return this;
   }
@@ -268,45 +229,41 @@ public class ProcedureHistory   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ProcedureHistory procedureHistory = (ProcedureHistory) o;
-    return Objects.equals(this.PropertyClass, procedureHistory.PropertyClass) &&
-        Objects.equals(this.procedureId, procedureHistory.procedureId) &&
-        Objects.equals(this.dateTimeService, procedureHistory.dateTimeService) &&
-        Objects.equals(this.opType, procedureHistory.opType) &&
-        Objects.equals(this.procedureName, procedureHistory.procedureName) &&
-        Objects.equals(this.dateTimeUpdate, procedureHistory.dateTimeUpdate) &&
-        Objects.equals(this.visit, procedureHistory.visit) &&
-        Objects.equals(this.doctorId, procedureHistory.doctorId) &&
-        Objects.equals(this.assetId, procedureHistory.assetId) &&
-        Objects.equals(this.patient, procedureHistory.patient) &&
-        Objects.equals(this.healthCareProvider, procedureHistory.healthCareProvider);
+    Xray xray = (Xray) o;
+    return Objects.equals(this.PropertyClass, xray.PropertyClass) &&
+        Objects.equals(this.xrayName, xray.xrayName) &&
+        Objects.equals(this.xrayResult, xray.xrayResult) &&
+        Objects.equals(this.xrayImage, xray.xrayImage) &&
+        Objects.equals(this.dateTimeService, xray.dateTimeService) &&
+        Objects.equals(this.dateTimeUpdate, xray.dateTimeUpdate) &&
+        Objects.equals(this.assetId, xray.assetId) &&
+        Objects.equals(this.patient, xray.patient) &&
+        Objects.equals(this.healthCareProvider, xray.healthCareProvider);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(PropertyClass, procedureId, dateTimeService, opType, procedureName, dateTimeUpdate, visit, doctorId, assetId, patient, healthCareProvider);
+    return Objects.hash(PropertyClass, xrayName, xrayResult, xrayImage, dateTimeService, dateTimeUpdate, assetId, patient, healthCareProvider);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ProcedureHistory {\n");
+    sb.append("class Xray {\n");
     
     sb.append("    PropertyClass: ").append(toIndentedString(PropertyClass)).append("\n");
-    sb.append("    procedureId: ").append(toIndentedString(procedureId)).append("\n");
+    sb.append("    xrayName: ").append(toIndentedString(xrayName)).append("\n");
+    sb.append("    xrayResult: ").append(toIndentedString(xrayResult)).append("\n");
+    sb.append("    xrayImage: ").append(toIndentedString(xrayImage)).append("\n");
     sb.append("    dateTimeService: ").append(toIndentedString(dateTimeService)).append("\n");
-    sb.append("    opType: ").append(toIndentedString(opType)).append("\n");
-    sb.append("    procedureName: ").append(toIndentedString(procedureName)).append("\n");
     sb.append("    dateTimeUpdate: ").append(toIndentedString(dateTimeUpdate)).append("\n");
-    sb.append("    visit: ").append(toIndentedString(visit)).append("\n");
-    sb.append("    doctorId: ").append(toIndentedString(doctorId)).append("\n");
     sb.append("    assetId: ").append(toIndentedString(assetId)).append("\n");
     sb.append("    patient: ").append(toIndentedString(patient)).append("\n");
     sb.append("    healthCareProvider: ").append(toIndentedString(healthCareProvider)).append("\n");
@@ -318,7 +275,7 @@ public class ProcedureHistory   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

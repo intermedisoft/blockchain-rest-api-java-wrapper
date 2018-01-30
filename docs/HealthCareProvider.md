@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **healthCareProviderName** | **String** |  | 
 **erPhone** | **String** |  |  [optional]
 **primaryCare** | **String** |  |  [optional]
-**dateTimeUpdate** | **String** |  | 
+**dateTimeUpdate** | [**DateTime**](DateTime.md) |  | 
 
 
 
