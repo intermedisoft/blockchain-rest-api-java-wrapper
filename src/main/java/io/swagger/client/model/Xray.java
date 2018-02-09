@@ -36,7 +36,7 @@ import org.joda.time.DateTime;
  * An asset named Xray
  */
 @ApiModel(description = "An asset named Xray")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-30T11:08:37.226+07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-09T09:39:54.228+07:00")
 public class Xray   {
   @SerializedName("$class")
   private String PropertyClass = "com.depa.blockchain.assets.Xray";
@@ -49,6 +49,12 @@ public class Xray   {
 
   @SerializedName("xrayImage")
   private String xrayImage = null;
+
+  @SerializedName("conclusion")
+  private String conclusion = null;
+
+  @SerializedName("recommendation")
+  private String recommendation = null;
 
   @SerializedName("dateTimeService")
   private DateTime dateTimeService = null;
@@ -128,13 +134,49 @@ public class Xray   {
    * Get xrayImage
    * @return xrayImage
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getXrayImage() {
     return xrayImage;
   }
 
   public void setXrayImage(String xrayImage) {
     this.xrayImage = xrayImage;
+  }
+
+  public Xray conclusion(String conclusion) {
+    this.conclusion = conclusion;
+    return this;
+  }
+
+   /**
+   * Get conclusion
+   * @return conclusion
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getConclusion() {
+    return conclusion;
+  }
+
+  public void setConclusion(String conclusion) {
+    this.conclusion = conclusion;
+  }
+
+  public Xray recommendation(String recommendation) {
+    this.recommendation = recommendation;
+    return this;
+  }
+
+   /**
+   * Get recommendation
+   * @return recommendation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecommendation() {
+    return recommendation;
+  }
+
+  public void setRecommendation(String recommendation) {
+    this.recommendation = recommendation;
   }
 
   public Xray dateTimeService(DateTime dateTimeService) {
@@ -241,6 +283,8 @@ public class Xray   {
         Objects.equals(this.xrayName, xray.xrayName) &&
         Objects.equals(this.xrayResult, xray.xrayResult) &&
         Objects.equals(this.xrayImage, xray.xrayImage) &&
+        Objects.equals(this.conclusion, xray.conclusion) &&
+        Objects.equals(this.recommendation, xray.recommendation) &&
         Objects.equals(this.dateTimeService, xray.dateTimeService) &&
         Objects.equals(this.dateTimeUpdate, xray.dateTimeUpdate) &&
         Objects.equals(this.assetId, xray.assetId) &&
@@ -250,7 +294,7 @@ public class Xray   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(PropertyClass, xrayName, xrayResult, xrayImage, dateTimeService, dateTimeUpdate, assetId, patient, healthCareProvider);
+    return Objects.hash(PropertyClass, xrayName, xrayResult, xrayImage, conclusion, recommendation, dateTimeService, dateTimeUpdate, assetId, patient, healthCareProvider);
   }
 
   @Override
@@ -262,6 +306,8 @@ public class Xray   {
     sb.append("    xrayName: ").append(toIndentedString(xrayName)).append("\n");
     sb.append("    xrayResult: ").append(toIndentedString(xrayResult)).append("\n");
     sb.append("    xrayImage: ").append(toIndentedString(xrayImage)).append("\n");
+    sb.append("    conclusion: ").append(toIndentedString(conclusion)).append("\n");
+    sb.append("    recommendation: ").append(toIndentedString(recommendation)).append("\n");
     sb.append("    dateTimeService: ").append(toIndentedString(dateTimeService)).append("\n");
     sb.append("    dateTimeUpdate: ").append(toIndentedString(dateTimeUpdate)).append("\n");
     sb.append("    assetId: ").append(toIndentedString(assetId)).append("\n");
