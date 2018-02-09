@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **xrayImage** | **String** |  |  [optional]
 **conclusion** | **String** |  |  [optional]
 **recommendation** | **String** |  |  [optional]
+**patientAcknowledgeDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
 **dateTimeService** | [**DateTime**](DateTime.md) |  | 
 **dateTimeUpdate** | [**DateTime**](DateTime.md) |  | 
 **assetId** | **String** | The instance identifier for this type | 

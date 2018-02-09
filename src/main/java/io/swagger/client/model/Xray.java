@@ -36,7 +36,7 @@ import org.joda.time.DateTime;
  * An asset named Xray
  */
 @ApiModel(description = "An asset named Xray")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-09T09:39:54.228+07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-09T10:08:59.238+07:00")
 public class Xray   {
   @SerializedName("$class")
   private String PropertyClass = "com.depa.blockchain.assets.Xray";
@@ -55,6 +55,9 @@ public class Xray   {
 
   @SerializedName("recommendation")
   private String recommendation = null;
+
+  @SerializedName("patientAcknowledgeDateTime")
+  private DateTime patientAcknowledgeDateTime = null;
 
   @SerializedName("dateTimeService")
   private DateTime dateTimeService = null;
@@ -179,6 +182,24 @@ public class Xray   {
     this.recommendation = recommendation;
   }
 
+  public Xray patientAcknowledgeDateTime(DateTime patientAcknowledgeDateTime) {
+    this.patientAcknowledgeDateTime = patientAcknowledgeDateTime;
+    return this;
+  }
+
+   /**
+   * Get patientAcknowledgeDateTime
+   * @return patientAcknowledgeDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DateTime getPatientAcknowledgeDateTime() {
+    return patientAcknowledgeDateTime;
+  }
+
+  public void setPatientAcknowledgeDateTime(DateTime patientAcknowledgeDateTime) {
+    this.patientAcknowledgeDateTime = patientAcknowledgeDateTime;
+  }
+
   public Xray dateTimeService(DateTime dateTimeService) {
     this.dateTimeService = dateTimeService;
     return this;
@@ -285,6 +306,7 @@ public class Xray   {
         Objects.equals(this.xrayImage, xray.xrayImage) &&
         Objects.equals(this.conclusion, xray.conclusion) &&
         Objects.equals(this.recommendation, xray.recommendation) &&
+        Objects.equals(this.patientAcknowledgeDateTime, xray.patientAcknowledgeDateTime) &&
         Objects.equals(this.dateTimeService, xray.dateTimeService) &&
         Objects.equals(this.dateTimeUpdate, xray.dateTimeUpdate) &&
         Objects.equals(this.assetId, xray.assetId) &&
@@ -294,7 +316,7 @@ public class Xray   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(PropertyClass, xrayName, xrayResult, xrayImage, conclusion, recommendation, dateTimeService, dateTimeUpdate, assetId, patient, healthCareProvider);
+    return Objects.hash(PropertyClass, xrayName, xrayResult, xrayImage, conclusion, recommendation, patientAcknowledgeDateTime, dateTimeService, dateTimeUpdate, assetId, patient, healthCareProvider);
   }
 
   @Override
@@ -308,6 +330,7 @@ public class Xray   {
     sb.append("    xrayImage: ").append(toIndentedString(xrayImage)).append("\n");
     sb.append("    conclusion: ").append(toIndentedString(conclusion)).append("\n");
     sb.append("    recommendation: ").append(toIndentedString(recommendation)).append("\n");
+    sb.append("    patientAcknowledgeDateTime: ").append(toIndentedString(patientAcknowledgeDateTime)).append("\n");
     sb.append("    dateTimeService: ").append(toIndentedString(dateTimeService)).append("\n");
     sb.append("    dateTimeUpdate: ").append(toIndentedString(dateTimeUpdate)).append("\n");
     sb.append("    assetId: ").append(toIndentedString(assetId)).append("\n");
